@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MY PAINT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+   
+</head>
+<body>
+    <h1 class="text-center">my paint</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"><button class="btn" id="eraser"><img class="logo" src="img/gomme.png" alt="eraser"></button>   
+            </div>
+            <div class="col-3"><button class="btn" id="pen"><img class="logo" src="img/crayon.jpg" alt="pen"></button> 
+                <input id="palette" type="color" value="#000000" name="color_hexa" />
+                <label for="number">width</label>
+                <input id="number" type="number" value="6" min="1" max="50" required>
+               </div>
+            <div class="col-1"><button class="btn" id="line"><img class="logo" src="img/line.png" alt="line"></button> </div>
+            <div class="col-2"><button class="btn" id="rectangle"><img class="logo" src="img/rectangle.png" alt="rectangle"></button>
+                <button class="btn" id="circle"><img class="logo" src="img/circle.svg" alt="circle"></button>
+            </div>
+            <div class="col-1">
+                <div>
+                    <p>fill</p>
+                </div>
+                <div>
+                    <label class="switch">
+                    <input id="fill" type="checkbox">
+                    <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-2">
+                <button  class="btn btn-danger" id="clear">clear</button>
+                <button  class="btn btn-success" id="save"></button>
+                <input class="btn btn-primary" id="image" class="file-input" type="file" name="image" accept=".jpg, .jpeg, .png, .gif"/>
+            </div>
+        </div>
+        <canvas width="1100px" height="800px" id="canvas">
+        </canvas>
+    </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
